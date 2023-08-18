@@ -9,12 +9,14 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
   }
   
   .container {
     max-width: 100%;
     padding: 20px;
-    text-align: center;
   }
   
   .link {
@@ -23,9 +25,20 @@
     margin-bottom: 5px;
   }
   
+  .countdown {
+    font-family: monospace;
+    font-size: 1vw; /* Adjust this value for countdown font size */
+    margin: 0px;
+  }
+  
   @media (max-width: 768px) {
     .link {
       font-size: 4vw; /* Adjust this value for smaller screens */
+    }
+    
+    .countdown {
+      font-size: 2.5vw; /* Adjust this value for smaller screens */
+      margin: 0px;
     }
   }
 </style>
@@ -33,7 +46,31 @@
 <body>
 <div class="container">
   <p class="link">JeeNeetards: <a href="https://www.reddit.com/r/JEENEETards/" target="_blank">r/JEENEETards</a></p>
+    <p class="countdown">-JEE Main 1: <span id="countdown1"></span></p>
+    <p class="countdown">-JEE Main 2: <span id="countdown2"></span></p>
+    <p class="countdown">-JEE Advanced: <span id="countdown3"></span></p>
+    <div style="height: 10px;"></div>
+    <p class="countdown">-NEET: <span id="countdown4"></span></p>
   <p class="link">Btechtards: <a href="https://www.reddit.com/r/Btechtards/" target="_blank">r/Btechtards</a></p>
 </div>
+<script>
+  function updateCountdown(targetDate, elementId) {
+    const now = new Date();
+    const target = new Date(targetDate);
+    const timeDiff = target - now;
+
+    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+
+    document.getElementById(elementId).textContent = hours + ' hours';
+  }
+
+  // Update countdowns
+  updateCountdown('2024-01-24', 'countdown1');
+  updateCountdown('2024-04-06', 'countdown2');
+  updateCountdown('2024-06-04', 'countdown3');
+  updateCountdown('2024-05-07', 'countdown4');
+</script>
 </body>
 </html>
+
+
