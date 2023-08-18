@@ -55,21 +55,39 @@
   <p class="link">Btechtards: <a href="https://www.reddit.com/r/Btechtards/" target="_blank">r/Btechtards</a></p>
 </div>
 <script>
-  function updateCountdown(targetDate, elementId) {
-    const now = new Date();
-    const target = new Date(targetDate);
-    const timeDiff = target - now;
+  function startCountdown(targetDate, elementId) {
+      const countdown = document.getElementById(elementId);
 
-    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+      if (!countdown) {
+          console.error(`Element with ID '${elementId}' not found.`);
+          return;
+      }
 
-    document.getElementById(elementId).textContent = hours + ' hours';
+      // Function to update the countdown
+      function updateCountdown() {
+          const now = new Date().getTime();
+          const targetTime = new Date(targetDate).getTime();
+          const distance = targetTime - now;
+
+          const hours = Math.floor(distance / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          countdown.innerHTML = `${hours}h ${minutes}m`;
+      }
+
+      // Update the countdown immediately on website load
+      updateCountdown();
+
+      // Update the countdown at every 5-second interval
+      setInterval(updateCountdown, 5000);
   }
-
+  
   // Update countdowns
-  updateCountdown('2024-01-24', 'countdown1');
-  updateCountdown('2024-04-06', 'countdown2');
-  updateCountdown('2024-06-04', 'countdown3');
-  updateCountdown('2024-05-07', 'countdown4');
+	startCountdown('2024-01-23T23:59:59', 'countdown1');
+	startCountdown('2024-04-05T23:59:59', 'countdown2');
+	startCountdown('2024-06-03T23:59:59', 'countdown3');
+	startCountdown('2024-05-06T23:59:59', 'countdown4');
 </script>
 </body>
 </html>
