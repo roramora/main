@@ -30,7 +30,8 @@
   .countdown {
     font-family: monospace;
     font-size: 1vw; /* Adjust this value for countdown font size */
-    margin:3px;
+    margin:5px;
+	padding-left:2vw;
   }
   
   .a1{
@@ -49,7 +50,7 @@
     
     .countdown {
       font-size: 2.5vw; /* Adjust this value for smaller screens */
-      margin: 0px;
+      margin: 5px;
     }
   }
 </style>
@@ -66,13 +67,13 @@
 <body>
 <div class="container">
   <p class="link">JeeNeetards: <a href="https://www.reddit.com/r/JEENEETards/" target="_blank">r/JEENEETards</a></p>
-    <ul class="countdown">JEE Main 1: <span id="countdown1" class="a1"></span></ul>
-    <ul class="countdown">JEE Main 2: <span id="countdown2" class="a1"></span></ul>
-    <ul class="countdown">JEE Advanced: <span id="countdown3" class="a1"></span></ul>
+    <p class="countdown">JEE Main 1: <span id="countdown1" class="a1"></span></p>
+    <p class="countdown">JEE Main 2: <span id="countdown2" class="a1"></span></p>
+    <p class="countdown">JEE Advanced: <span id="countdown3" class="a1"></span></p>
     <div style="height: 5px;"></div>
-    <ul class="countdown">NEET: <span id="countdown4" class="a1"></span></ul>
+    <p class="countdown">NEET: <span id="countdown4" class="a1"></span></p>
   <p class="link">Btechtards: <a href="https://www.reddit.com/r/Btechtards/" target="_blank">r/Btechtards</a></p>
-    <ul class="countdown">IIT Delhi Question Paper: <a href="https://bsw.iitd.ac.in/question_papers.php" target="_blank">BSW Question Papers</a></ul>
+    <p class="countdown">IIT-D Question Paper: <a href="https://bsw.iitd.ac.in/question_papers.php" target="_blank">BSW Link</a></p>
 </div>
 <script>
   function startCountdown(targetDate, elementId) {
