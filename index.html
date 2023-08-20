@@ -12,6 +12,7 @@
     display: flex;
     justify-content: center; /* Center horizontally */
     min-height: 100vh; /* Ensure full viewport height */
+	background-color: #f6f9fb;
   }
   
   .container {
@@ -23,13 +24,22 @@
     font-family: monospace;
     font-size: 1.75vw; /* Adjust this value as needed */
     margin-top:10px;
-	margin-bottom:5px;
+	margin-bottom:10px;
   }
   
   .countdown {
     font-family: monospace;
     font-size: 1vw; /* Adjust this value for countdown font size */
-    margin:0px;
+    margin:3px;
+  }
+  
+  .a1{
+	background-color: #000000;
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 2px;
+	border: 1px #f6f9fb solid;
   }
   
   @media (max-width: 768px) {
@@ -56,11 +66,11 @@
 <body>
 <div class="container">
   <p class="link">JeeNeetards: <a href="https://www.reddit.com/r/JEENEETards/" target="_blank">r/JEENEETards</a></p>
-    <li class="countdown">JEE Main 1: <span id="countdown1"></span></li>
-    <li class="countdown">JEE Main 2: <span id="countdown2"></span></li>
-    <li class="countdown">JEE Advanced: <span id="countdown3"></span></li>
+    <li class="countdown">JEE Main 1: <span id="countdown1" class="a1"></span></li>
+    <li class="countdown">JEE Main 2: <span id="countdown2" class="a1"></span></li>
+    <li class="countdown">JEE Advanced: <span id="countdown3" class="a1"></span></li>
     <div style="height: 5px;"></div>
-    <li class="countdown">NEET: <span id="countdown4"></span></li>
+    <li class="countdown">NEET: <span id="countdown4" class="a1"></span></li>
   <p class="link">Btechtards: <a href="https://www.reddit.com/r/Btechtards/" target="_blank">r/Btechtards</a></p>
     <li class="countdown">IIT Delhi Question Paper: <a href="https://bsw.iitd.ac.in/question_papers.php" target="_blank">BSW Question Papers</a></li>
 </div>
@@ -101,5 +111,3 @@
 </script>
 </body>
 </html>
-
-
