@@ -28,24 +28,6 @@
     margin: 25px;
   }
   
-  .banner {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    z-index: 999; /* Ensure it's above other content */
-  }
-  
-  /* Banner text styles */
-  .banner-text {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    margin: 0px;
-    padding: 5px;
-  }
   
   /* Responsive font size settings */
   @media only screen and (min-width: 501px) {
