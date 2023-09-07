@@ -3,112 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roramora 🤡</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    min-height: 100vh; /* Ensure full viewport height */
-	background-color: #f6f9fb;
-  }
-  
-  .container {
-    max-width: 100%;
-    padding: 20px;
-  }
-  
-  .link {
-    font-family: monospace;
-    font-size: 1.75vw; /* Adjust this value as needed */
-    margin-top:10px;
-	margin-bottom:10px;
-  }
-  
-  .countdown {
-    font-family: monospace;
-    font-size: 1vw; /* Adjust this value for countdown font size */
-    margin:5px;
-	padding-left:2vw;
-  }
-  
-  .a1{
-	background-color: #000000;
-	color: white;
-	padding-left: 5px;
-	padding-right: 5px;
-	border-radius: 2px;
-	border: 1px #f6f9fb solid;
-  }
-  
-  @media (max-width: 768px) {
-    .link {
-      font-size: 4vw; /* Adjust this value for smaller screens */
-    }
-    
-    .countdown {
-      font-size: 2.5vw; /* Adjust this value for smaller screens */
-      margin: 5px;
-    }
-  }
-</style>
-</head>
+<title>JEENEETards</title>
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Mono' rel='stylesheet'>
+<link rel="stylesheet" href="styles.css">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0K4PEBRM5"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-P0K4PEBRM5');
 </script>
+</head>
 <body>
-<div class="container">
-  <p class="link">JeeNeetards: <a href="https://www.reddit.com/r/JEENEETards/" target="_blank">r/JEENEETards</a></p>
-    <p class="countdown">JEE Main 1: <span id="countdown1" class="a1"></span></p>
-    <p class="countdown">JEE Main 2: <span id="countdown2" class="a1"></span></p>
-    <p class="countdown">JEE Advanced: <span id="countdown3" class="a1"></span></p>
-    <div style="height: 5px;"></div>
+  <div class="container">
+    <p class="countdown">JEE MAIN 1: <span id="countdown1" class="a1"></span></p>
+    <p class="countdown">JEE MAIN 2: <span id="countdown2" class="a1"></span></p>
+    <p class="countdown">JEE ADV: <span id="countdown3" class="a1"></span></p>
     <p class="countdown">NEET: <span id="countdown4" class="a1"></span></p>
-  <p class="link">Btechtards: <a href="https://www.reddit.com/r/Btechtards/" target="_blank">r/Btechtards</a></p>
-    <p class="countdown">IIT-D Question Paper: <a href="https://bsw.iitd.ac.in/question_papers.php" target="_blank">BSW Link</a></p>
-</div>
-<script>
-  function startCountdown(targetDate, elementId) {
-      const countdown = document.getElementById(elementId);
-
-      if (!countdown) {
-          console.error(`Element with ID '${elementId}' not found.`);
-          return;
-      }
-
-      // Function to update the countdown
-      function updateCountdown() {
-          const now = new Date().getTime();
-          const targetTime = new Date(targetDate).getTime();
-          const distance = targetTime - now;
-
-          const hours = Math.floor(distance / (1000 * 60 * 60));
-          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-          countdown.innerHTML = `${hours}h ${minutes}m`;
-      }
-
-      // Update the countdown immediately on website load
-      updateCountdown();
-
-      // Update the countdown at every 5-second interval
-      setInterval(updateCountdown, 5000);
-  }
-  
-  // Update countdowns
-	startCountdown('2024-01-23T23:59:59', 'countdown1');
-	startCountdown('2024-04-05T23:59:59', 'countdown2');
-	startCountdown('2024-06-03T23:59:59', 'countdown3');
-	startCountdown('2024-05-06T23:59:59', 'countdown4');
-</script>
+  </div>
+<div class="banner">
+<p class="banner-text">Coming Soon: AI companion - Vikram</p></div>
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

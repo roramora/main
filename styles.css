@@ -1,0 +1,81 @@
+/* Reset default styles for all elements */
+* {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    overflow: hidden;
+    font-family: 'IBM Plex Mono', monospace;
+    height: 100vh;
+    background-color: #D1CBC1;
+    color: #2D383A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    position: fixed;
+    top: calc(50% - 24px); 
+    transform: translateY(-50%);
+  }
+  
+  /* Common styles for paragraphs */
+  p {
+    margin: 25px;
+  }
+  
+  .banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    z-index: 999; /* Ensure it's above other content */
+  }
+  
+  /* Banner text styles */
+  .banner-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  /* Responsive font size settings */
+  @media only screen and (min-width: 501px) {
+    p {
+      font-size: calc(24px + 1vw);
+    }
+  }
+  
+  @media only screen and (max-width: 500px) and (min-width: 376px) {
+    p {
+      font-size: calc(22px + 1vw);
+    }
+  }
+  
+  @media only screen and (max-width: 375px) and (min-width: 321px) {
+    p {
+      font-size: calc(18px + 1vw);
+    }
+  }
+  
+  
+  @media only screen and (max-width: 320px) and (min-width: 276px) {
+    p {
+      font-size: calc(14px + 1vw);
+    }
+  }
+  
+  
+  @media only screen and (max-width: 275px) {
+    p {
+      font-size: calc(12px + 1vw);
+    }
+  }
